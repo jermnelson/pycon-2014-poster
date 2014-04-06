@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pycon 2014  </title>
+
+    <!-- Bootstrap -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <style>
+     #poster {
+      // 48 inches = 4 feet
+       width: 4608px;
+       height: 4608px;
+     } 
+
+    #poster-qrcode {
+       position: absolute;
+       left: 4000px;
+       top: 4250px;
+    }    
+
+     #poster-url {
+       font-color: #C0C0C0;
+       font-family: Verdana, sans-serif;
+       font-size: 118px;
+       position: absolute;
+       left: 1300px;
+       top: 4300px;
+     }
+
+     #poster-url a {
+       font-color: #808080;
+     } 
+
+     #pycon {
+       font-family: Verdana, sans-serif;
+       font-size: 128px;
+       position: absolute;
+       left: 3000px;
+     }
+    </style>
+  </head>
+  <body>
+    <div id="poster" style="border:1px solid black">
+      <h1 id="pycon">
+       pycon 2014
+       
+      </h1>
+      <h1>April 13th, 2014</h1>
+
+      <h1 id="poster-url" >{#<a href="http://intro2libsys.info/pycon-2014-poster">#}
+       http://intro2libsys.info/pycon-2014-poster/</h1>
+      <img id="poster-qrcode" src="{{ url_for('static', filename='img/qrcode.svg') }}">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
