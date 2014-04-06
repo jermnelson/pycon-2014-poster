@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pycon 2014  </title>
+    <title>Pycon 2014 Poster</title>
 
     <!-- Bootstrap -->
 
@@ -21,6 +21,33 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
     <style>
+  
+     #aristotle-discovery-layer {
+       font-size: 116px;
+       position: absolute;
+       left: 200px;
+       top: 250px;
+
+    }
+
+    #aristotle-discovery-layer h1 {
+      font-size: 116px;
+    } 
+
+    #aristotle-discovery-layer h2 {
+     color: #C0C0C0;
+     font-size: 100px;
+
+    }
+
+    #catalog-pull-platform {
+       position: absolute;
+       left: 600px;
+       top: 3000px;
+
+
+    } 
+
      #poster {
       // 48 inches = 4 feet
        width: 4608px;
@@ -34,7 +61,7 @@
     }    
 
      #poster-url {
-       font-color: #C0C0C0;
+       color: #C0C0C0;
        font-family: Verdana, sans-serif;
        font-size: 118px;
        position: absolute;
@@ -42,7 +69,7 @@
        top: 4300px;
      }
 
-     #poster-url a {
+     #poster-url h1, a {
        font-color: #808080;
      } 
 
@@ -52,15 +79,76 @@
        position: absolute;
        left: 3000px;
      }
+
+   #redis-library-services-platform {
+      align: right;
+      font-family: Verdana, sans-serif;
+      font-size: 118px;
+      position: absolute;
+      top: 1700px;
+      left: 2100px;
+
+    }
+
+   #redis-library-services-platform h1 {
+      font-size: 116px;
+    } 
+
+    #redis-library-services-platform h2 {
+     color: #C0C0C0;
+     font-size: 100px;
+
+    }
+
+
+
+ 
     </style>
   </head>
   <body>
     <div id="poster" style="border:1px solid black">
-      <h1 id="pycon">
-       pycon 2014
-       
-      </h1>
-      <h1>April 13th, 2014</h1>
+      <div id="pycon">
+       <h1>pycon 2014</h1>
+       <h2>April 13th, 2014</h2>
+      </div>
+
+      <div id="aristotle-discovery-layer">
+       <img src="{{ url_for('static', filename="img/discovery-coloradocollege-edu.png") }}">
+       <h2>
+         <a href="http://discovery.coloradocollege.edu/">http://discovery.coloradocollege.edu/</a>
+       </h2>
+       <h1>Starting with Aristotle Discovery Layer</h1>
+       <h2>(2011-)
+       <p>
+
+       </p>
+      </div>
+
+      <div id="redis-library-services-platform">
+       <h1>moves to Redis Library Services Platform</h1>
+       <h2>(2011-2013)</h2>
+        <table>
+         <tr>
+          <td>
+            <img src="http://journal.code4lib.org/media/issue19/nelson/single-server-bibframe-datastore.png">
+          </td>
+          <td>
+            <img class="pull-left" src="{{ url_for('static', filename="img/prospector-redis-lib-services-platform.png") }}">
+          </td>
+         </tr>
+        </table>
+       <p>
+
+       </p>
+      </div>
+
+      <div id="catalog-pull-platform">
+       <h1>pivoting to Catalog Pull Platform</h1>
+       <img src="http://intro2libsys.info/static/img/catalog-pull-platform.svg">
+       <img src="{{ url_for("static", filename="img/cpp-example.png") }}">
+
+      </div>
+
 
       <h1 id="poster-url" >{#<a href="http://intro2libsys.info/pycon-2014-poster">#}
        http://intro2libsys.info/pycon-2014-poster/</h1>
