@@ -17,13 +17,13 @@ poster = Flask('pycon-2014-poster')
 
 @poster.route('/')
 def default():
-    return render_template('index.html')
+    return render_template('web.html')
 
 if __name__.startswith('__main__'):
     poster.run(
         host='0.0.0.0',
         port=8005,
         debug=True)
-    
-    
-    
+
+
+

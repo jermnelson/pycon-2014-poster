@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pycon 2014 Poster</title>
+
+    <!-- Bootstrap -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <style>
+     body {
+      font-family: Verdana, sans-serif;
+     }     
+
+    h1 {
+      font-size: 116px;
+    } 
+
+
+    h2 {
+       color:  #C0C0C0;
+       font-size: 90px;
+     }
+
+     .description {
+       font-size: 24pt;
+       width: 1000px;
+     }
+
+     #aristotle-discovery-layer {
+       font-size: 116px;
+       position: absolute;
+       left: 2500px;
+       top: 600px;
+    }
+
+    #catalog-pull-platform {
+       position: absolute;
+       left: 2200px;
+       top: 3000px;
+    } 
+
+    #cc-logo {
+       position: absolute;
+       left: 1500px;
+       top: 300px;
+    }
+
+    #what-discovery-layer {
+      position: absolute;
+      left: 3500px;
+      top: 725px;
+      width: 500px;
+
+    }
+
+    #legacy-iii-catalog {
+       position: absolute;
+       left: 50px;
+       top: 350px;
+    }
+
+    
+
+    #poster {
+      // 48 inches = 4 feet
+       width: 4608px;
+       height: 4608px;
+     } 
+
+    #poster-qrcode {
+       position: absolute;
+       left: 4000px;
+       top: 4250px;
+    }    
+
+     #poster-url {
+       color: #C0C0C0;
+       font-size: 90px;
+       position: absolute;
+       left: 80px;
+       top: 4400px;
+     }
+
+     #poster-url h1, a {
+       font-color: #808080;
+     } 
+
+     #pycon {
+       position: absolute;
+       left: 3700px;
+       top: 100px;
+     }
+
+    
+     #pycon-title {
+       color: rgb(35, 61, 97);
+       font-size: 140px;
+       left: 10px;
+       top: 100px;
+       position: absolute;
+       text-transform: uppercase;
+     }    
+
+ 
+   #redis-library-services-platform {
+      align: right;
+      font-size: 118px;
+      position: absolute;
+      top: 1900px;
+      left: 290px;
+
+    }
+
+   #zombie-marc {
+     left: 1100px;
+     position: absolute;
+     top: 500px;
+     width: 500px;
+
+   }
+
+ 
+    </style>
+  </head>
+  <body>
+    <div id="poster" style="border:1px solid black">
+
+      <h1 id="pycon-title">Replacing a Legacy Library Catalog</h1>
+
+      <img id="cc-logo" src="http://www.coloradocollege.edu/dotAsset/1d11ef35-1c8e-42b6-b2b8-113dc3370527.jpg">
+
+      <div id="pycon">
+       <img src="https://us.pycon.org/2014/site_media/static/img/pycon2014-logo_sub.png?3d9c8c2bd424">
+      </div>
+
+      <div id="legacy-iii-catalog">
+        <img src="{{ url_for('static', filename="img/legacy-tiger.png") }}">
+        <h1>Legacy Online Public<br>Access Catalog (OPAC)</h1>
+        <h2>(~2001-)</h2>  
+        <p class="description">Web interface to legacy enterprise integrated library systems (ILS) from 
+        a commercial library software vendor. Main staff inteface is a Java Swing application..
+        </p>
+      </div>     
+
+      <div class="panel panel-danger" id="zombie-marc">
+       <div class="panel-heading">
+        <h1 class="panel-title">Persistence of MARC21</h1> 
+       </div>
+       <div class="panel-body">
+        <img src="http://www.loc.gov/marc/images/marc21h2.gif" class="pull-left">
+        <p class="lead">MARC (an acronym for <b>MA</b>chine-<b>R<b>eadable <b>C</b>ataloging) 
+         is a data format for bibliographic, authority, and holdings data. The Library of Congress 
+         is responsible for initially creating MARC in the 1960s and continues to support to the
+         current time. The MARC format combines both fixed control fields and variable length fields
+         with a number of different subfields. Most library catalogs use MARC format, either using
+         the format natively or converting records encoded in MARC to relational database or other 
+         backend storage. Colorado College's Tutt Library has a collection of over
+         1,100,000 MARC21 records representing Colorado College's physical and online collections.
+        </p> 
+       </div>
+      </div> 
+
+      <div id="aristotle-discovery-layer">
+       <img src="{{ url_for('static', filename="img/discovery-coloradocollege-edu.png") }}">
+       <h2>
+         <a href="http://discovery.coloradocollege.edu/">http://discovery.coloradocollege.edu/</a>
+       </h2>
+       <h1>Aristotle Discovery Layer</h1>
+       <h2>(2011-)</h2>
+       
+       <p class="lead">
+
+       </p>
+       <img src="https://www.python.org/static/img/python-logo.png">
+       <ul class="lead">
+         <li>Started as a fork of the Django-based Kochief (http://code.google.com/p/kochief/)</li>
+         <li>Indexes MARC21 records exported from legacy catalog into Apache Solr (https://lucene.apache.org/solr/)</li>
+         <li>Runs on a Ubuntu server VM on Colorado College's VMWare cluster</li>
+         <li>Repository available at 
+            <a href="https://github.com/jermnelson/Discover-Aristotle">https://github.com/jermnelson/Discover-Aristotle</a></li>
+       </ul>  
+      </div>
+
+
+      <div class="panel panel-primary" id="what-discovery-layer" style="width: 500px">
+       <div class="panel-heading">
+        <h1 class="panel-title">What is a Discovery Layer?</h1>
+       </div>
+       <div class="panel-body">
+        <p class="lead">The user interface and search indices for finding, displaying, and 
+          with the content in library systems that was inspired by both Google's 
+          search and Amazon's user interfaces. Typically, a Discovery Layer includes all of the 
+          print books, DVDs, Music CDs, and journals MARC records indexed into proprietary  
+          search index or Apache's Solr Index. 
+       </div>
+      </div>
+
+      <div id="redis-library-services-platform">
+       <h1>Redis Library Services Platform</h1>
+       <h2>(2011-2013)</h2>
+        <table>
+         <tr>
+          <td>
+            <img src="http://journal.code4lib.org/media/issue19/nelson/single-server-bibframe-datastore.png">
+            <ul class="lead">
+             <li>Redis Instance for bibliographic and operational data</li>
+             <li>Scales to memory limitations of Redis</li>
+             <li>Stored around
+                 ~700k MARC21 records in about 20 GB RAM</li>
+
+            </ul> 
+          </td>
+          <td>
+            <img class="pull-left" src="{{ url_for('static', filename="img/prospector-redis-lib-services-platform.png") }}">
+          </td>
+         </tr>
+        
+        </table>
+       <p>
+
+       </p>
+      </div>
+
+      <div id="catalog-pull-platform">
+       <h1>Catalog Pull Platform</h1>
+       <h2>(2013-)</h2>
+       <img src="http://intro2libsys.info/static/img/catalog-pull-platform.svg">
+       <img src="{{ url_for("static", filename="img/cpp-example.png") }}">
+
+      </div>
+
+
+      <h1 id="poster-url" >{#<a href="http://intro2libsys.info/pycon-2014-poster">#}
+       http://intro2libsys.info/pycon-2014-poster/</h1>
+      <img id="poster-qrcode" src="{{ url_for('static', filename='img/qrcode.svg') }}">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
