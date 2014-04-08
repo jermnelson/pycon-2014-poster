@@ -11,10 +11,13 @@
 
  var posterTitle = draw.group();
 
- posterTitle.add(draw.image("{{ url_for('static', filename='img/pycon2014-logo.png') }}", 528, 105));
- posterTitle.add(draw.text("Jeremy Nelson").font({ size: 60, family: 'Helvetica' }).y(110));
- posterTitle.move(3500, 100);
+ var posterLogo = draw.group();
 
+ posterLogo.add(draw.image("{{ url_for('static', filename='img/pycon2014-logo.png') }}", 528, 105));
+ posterLogo.add(draw.text("Jeremy Nelson").font({ size: 60, family: 'Helvetica' }).y(110));
+ posterLogo.move(3500, 100);
+
+ 
 
 </script>
 </body>
