@@ -1,0 +1,112 @@
+     body {
+      font-family: Verdana, sans-serif;
+     }     
+
+    h1 {
+      font-size: 90px;
+    }
+
+    h2 {
+       color:  #C0C0C0;
+       font-size: 80px;
+     }
+
+     .description {
+       font-size: 24pt;
+       {# width: 1000px; #}
+     }
+
+     #aristotle-discovery-layer {
+       //font-size: 116px;
+       position: absolute;
+       //left: 2500px;
+       //top: 600px;
+    }
+
+    #catalog-pull-platform {
+       position: absolute;
+       left: 2200px;
+       top: 3000px;
+    } 
+
+    #cc-logo {
+       position: absolute;
+       left: 1500px;
+       top: 300px;
+    }
+
+    #what-discovery-layer {
+      position: absolute;
+      left: 35px;
+      top: 15px;
+      width: 500px;
+
+    }
+
+    #legacy-iii-catalog {
+       position: absolute;
+     {#  left: 50px;
+       top: 350px; #}
+    }
+
+    
+
+    #poster {
+      // 48 inches = 4 feet
+      // width: 4608px;
+      // height: 4608px;
+     } 
+
+    #poster-qrcode {
+       position: absolute;
+       left: 4000px;
+       top: 4250px;
+    }    
+
+     #poster-url {
+       color: #C0C0C0;
+       font-size: 90px;
+       position: absolute;
+       left: 80px;
+       top: 4400px;
+     }
+
+     #poster-url h1, a {
+       font-color: #808080;
+     } 
+
+     #pycon {
+       position: absolute;
+	   font-size: 24px;
+	   text-align: right;
+       {#left: 3700px;
+       top: 100px;#}
+     }
+
+    
+     #pycon-title {
+       color: rgb(35, 61, 97);
+       font-size: 140px;
+       left: 10px;
+       top: 100px;
+       position: absolute;
+       text-transform: uppercase;
+     }    
+
+ 
+   #redis-library-services-platform {
+      align: right;
+      font-size: 118px;
+      position: absolute;
+      //top: 1900px;
+      //left: 290px;
+
+    }
+
+   #zombie-marc {
+     left: 10px;
+     position: absolute;
+     top: 25px;
+     width: 500px;
+
+   }

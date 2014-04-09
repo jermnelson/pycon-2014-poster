@@ -21,194 +21,83 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
     <style>
-     body {
-      font-family: Verdana, sans-serif;
-     }     
-
-    h1 {
-      font-size: 90px;
-    }
-
-    h2 {
-       color:  #C0C0C0;
-       font-size: 80px;
-     }
-
-     .description {
-       font-size: 24pt;
-       {# width: 1000px; #}
-     }
-
-     #aristotle-discovery-layer {
-       //font-size: 116px;
-       position: absolute;
-       //left: 2500px;
-       //top: 600px;
-    }
-
-    #catalog-pull-platform {
-       position: absolute;
-       left: 2200px;
-       top: 3000px;
-    } 
-
-    #cc-logo {
-       position: absolute;
-       left: 1500px;
-       top: 300px;
-    }
-
-    #what-discovery-layer {
-      position: absolute;
-      left: 35px;
-      top: 15px;
-      width: 500px;
-
-    }
-
-    #legacy-iii-catalog {
-       position: absolute;
-     {#  left: 50px;
-       top: 350px; #}
-    }
-
-    
-
-    #poster {
-      // 48 inches = 4 feet
-      // width: 4608px;
-      // height: 4608px;
-     } 
-
-    #poster-qrcode {
-       position: absolute;
-       left: 4000px;
-       top: 4250px;
-    }    
-
-     #poster-url {
-       color: #C0C0C0;
-       font-size: 90px;
-       position: absolute;
-       left: 80px;
-       top: 4400px;
-     }
-
-     #poster-url h1, a {
-       font-color: #808080;
-     } 
-
-     #pycon {
-       position: absolute;
-	   font-size: 24px;
-	   text-align: right;
-       {#left: 3700px;
-       top: 100px;#}
-     }
-
-    
-     #pycon-title {
-       color: rgb(35, 61, 97);
-       font-size: 140px;
-       left: 10px;
-       top: 100px;
-       position: absolute;
-       text-transform: uppercase;
-     }    
-
- 
-   #redis-library-services-platform {
-      align: right;
-      font-size: 118px;
-      position: absolute;
-      //top: 1900px;
-      //left: 290px;
-
-    }
-
-   #zombie-marc {
-     left: 10px;
-     position: absolute;
-     top: 25px;
-     width: 500px;
-
-   }
-
  
     </style>
   </head>
-  <body>
-    <div id="poster">
-      {#
-      {% include 'snippets/poster-title.html' %}
+  <body class="container">
+    <div class="well">
+     <h3>PYCON 2014 Poster</h3>
+     <h1>Replacing a Legacy Library Catalog @ Colorado College</h1>
 
-	    
-      {% include 'snippets/pycon-logo-info.html' %}
- 
-  	
-      {% include 'snippets/legacy-iii-catalog.html' %}
-	  
-   	 
-      {% include 'snippets/zombie-marc.html' %}
-      
+     <div class="row">
+      <div class="col-md-6">
+       <img src="{{ url_for('static', filename='img/poster-photo.png') }}" class="img img-thumbnail">
+      </div>
+      <div class="col-md-6">
+       <p class="lead">This companion webpage accompanies a poster session by Jeremy Nelson
+       at the annual Python programming conference, <a href="https://us.pycon.org/2014/">PYCON 2014</a>. 
        
-      {% include 'snippets/aristotle-discovery-layer.html' %}
-    	   
-    #}  
-	  
-
-      <div class="panel panel-primary" id="what-discovery-layer" style="width: 500px">
-       <div class="panel-heading">
-        <h1 class="panel-title">What is a Discovery Layer?</h1>
+       </p> 
+      </div>
+     </div> 
+    </div>
+   
+    <div class="well">
+     <div class="row">
+       <div class="col-md-4">
+        <h3>Web Application Hyperlinks</h3>
+        <ul>
+          <li><a href="http://discovery.coloradocollege.edu/">http://discovery.coloradocollege.edu/</a> 
+           Existing Django Discovery Layer for Colorado College, licensed under Apache 2</li>
+          <li><a href="http://tuttdemo.coloradocollege.edu/">http://tuttdemo.coloradocollege.edu/</a> - 
+          Redis Demostration Discovery Layer using MARC21 records from Prospector and Colorado College's digital archives, licensed 
+          under Apache2</li>
+          <li><a href="http://catalog.coloradocollege.edu/">http://catalog.coloradocollege.edu/</a> -
+          First MVP of new catalog for Colorado College using the <a href="http://intro2libsys.info/catalog-pull-platform/">Catalog Pull Platform</a>,
+          licensed under th GPLv2.
+          </li>
+        </ul>
        </div>
-       <div class="panel-body">
-        <p class="lead">The user interface and search indices for finding, displaying, and 
-          with the content in library systems that was inspired by both Google's 
-          search and Amazon's user interfaces. Typically, a Discovery Layer includes all of the 
-          print books, DVDs, Music CDs, and journals MARC records indexed into proprietary  
-          search index or Apache's Solr Index. 
+       <div class="col-md-4">
+        <h3>Source Code Repositories</h3>
+        <ul>
+         <li>Discovery Aristotle <a href="https://github.com/jermnelson/Discover-Aristotle">https://github.com/jermnelson/Discover-Aristotle</a> - 
+         Forked from Kochief, uses Solr for search along with Django for the web-framework.</li>
+         <li>Aristotle Library Apps <a href="https://github.com/jermnelson/aristotle-library-apps">href="https://github.com/jermnelson/aristotle-library-apps</a> 
+          - Django HTML5 
+          mobile and tablet apps for discovering, accessing, and managing library information. Bibliographic records 
+          along with other library and organizational specific informations are linked, stored, and managed using Redis. 
+         </li>
+         <li>BIBFRAME-Datastore <a href="https://github.com/jermnelson/BIBFRAME-Datastore">https://github.com/jermnelson/BIBFRAME-Datastore</a>, 
+           a Redis-based project for managing bibliographic records and operational data focused on libraries and other similar 
+          information-based organization</li>
+         <li><a href="https://github.com/jermnelson/flask_bibframe">Flask-BIBFRAME</a> - extension provides 
+            Linked Data support for the BIBFRAME (<a href="http://bibframe.org/">http://bibframe.org/</a>) model 
+           and vocabulary. Code at <a href="https://github.com/jermnelson/flask_bibframe">https://github.com/jermnelson/flask_bibframe</a></li>
+         <li><a href="https://github.com/jermnelson/flask_schemaorg">Flask-SchemaOrg</a> - extension for supporting the 
+           <a href="http://schema.org">http://schema.org</a> Linked Data vocabulary. Source code at 
+           <a href="https://github.com/jermnelson/flask_schemaorg">https://github.com/jermnelson/flask_schemaorg</a>
+         </li>
+        <li><a href="https://github.com/jermnelson/flask-fedora-commons">Flask-FedoraCommons</a> - extension provides an interface to a 
+         <a href="">Fedora Commons </a> digital repository. Code available at <a href="https://github.com/jermnelson/flask-fedora-commons">
+         https://github.com/jermnelson/flask-fedora-commons.
+         </a>
+        </li>
+
+        </ul>
        </div>
-      </div>
-      {#
-      <div id="redis-library-services-platform">
-       <h1>Redis Library Services Platform</h1>
-       <h2>(2011-2013)</h2>
-        <table>
-         <tr>
-          <td>
-            <img src="http://journal.code4lib.org/media/issue19/nelson/single-server-bibframe-datastore.png">
-            <ul class="lead">
-             <li>Redis Instance for bibliographic and operational data</li>
-             <li>Scales to memory limitations of Redis</li>
-             <li>Stored around
-                 ~700k MARC21 records in about 20 GB RAM</li>
+       <div class="col-md-4">
+        <h3>Resources</h3>
+        <dl>
+           <dt><a href="http://bibframe.org">BIBFRAME.org</a></dt>
+           <dd>Home of the Library of Congress BIBFRAME vocabulary</dd>
 
-            </ul> 
-          </td>
-          <td>
-            <img class="pull-left" src="{{ url_for('static', filename="img/prospector-redis-lib-services-platform.png") }}">
-          </td>
-         </tr>
-        
-        </table>
-       <p>
+        </dl>
 
-       </p>
-      </div>
-
-      <div id="catalog-pull-platform">
-       <h1>Catalog Pull Platform</h1>
-       <h2>(2013-)</h2>
-       <img src="http://intro2libsys.info/static/img/catalog-pull-platform.svg">
-       <img src="{{ url_for("static", filename="img/cpp-example.png") }}">
-
-      </div>
-
-     
-      <h1 id="poster-url" ><a href="http://intro2libsys.info/pycon-2014-poster">
-       http://intro2libsys.info/pycon-2014-poster/</h1>
-      <img id="poster-qrcode" src="{{ url_for('static', filename='img/qrcode.svg') }}">
-#}
+       </div>
+     </div>
+    </div>
+    <footer>Copyright 2014 by Jeremy Nelson under CC-A</footer> 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
